@@ -1,1 +1,1 @@
-CREATE SCHEMA IF NOT EXISTS `premium-guide-410714.silver_transaction`;
+CREATE SCHEMA IF NOT EXISTS `dev-arquitectura-jcorchuelom.silver_transaction`;
