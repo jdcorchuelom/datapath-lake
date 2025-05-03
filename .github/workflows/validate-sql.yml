@@ -39,7 +39,7 @@ jobs:
           done
 
           if [[ $INVALID -eq 1 ]]; then
-            echo "::error ::Validación fallida: sólo se permiten premium-guide-410714 y bigquery-public-data"
+            echo "::error ::Validación fallida: sólo se permiten dev-arquitectura-jcorchuelom y bigquery-public-data"
             exit 1
           else
             echo "✅ Todos los scripts usan proyectos válidos."
