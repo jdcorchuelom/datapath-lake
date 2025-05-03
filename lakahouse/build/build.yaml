@@ -7,20 +7,20 @@ steps:
       - |
         git clone https://github.com/jdcorchuelom/datapath-lake.git
         cd datapath-lake
-        chmod +x ./build/bash/bigquery_ddl.sh
-        chmod +x ./build/bash/bigquery_sp.sh
-        chmod +x ./build/bash/bigquery_dml.sh
-        chmod +x ./build/bash/workflow.sh
+        chmod +x ./lakahouse/build/bash/bigquery_ddl.sh
+        chmod +x ./lakahouse/build/bash/bigquery_sp.sh
+        chmod +x ./lakahouse/build/bash/bigquery_dml.sh
+        chmod +x ./lakahouse/build/bash/workflow.sh
   # Step 02: Leer lista_sp.json y ejecutar los scripts listados en el nodo 'proyectos'
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'bash'
-    args: [ '-c', './datapath-lake/build/bash/bigquery_ddl.sh prd' ]
+    args: [ '-c', './datapath-lake/lakahouse/build/bash/bigquery_ddl.sh prd' ]
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'bash'
-    args: [ '-c', './datapath-lake/build/bash/bigquery_sp.sh prd' ]
+    args: [ '-c', './datapath-lake/lakahouse/build/bash/bigquery_sp.sh prd' ]
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'bash'
-    args: [ '-c', './datapath-lake/build/bash/bigquery_dml.sh prd' ]
+    args: [ '-c', './datapath-lake/lakahouse/build/bash/bigquery_dml.sh prd' ]
 # Opcional: Sustituciones de variables de entorno
 
 options:
