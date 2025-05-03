@@ -1,0 +1,1 @@
+CREATE SCHEMA IF NOT EXISTS `dev-arquitectura-jcorchuelom.gold_ba`;
